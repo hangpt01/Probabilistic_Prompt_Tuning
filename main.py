@@ -21,7 +21,7 @@ from Models.L2P_heuristic_model import L2P_ViT_B32
 from Models.pFedPG_model import client_prompted_vit_b32, BaseHeadsForLocal, prompt_generator
 from util.train_eval import evaluate_pFedPG, train_eval_pFedPG, evaluate_all_pFedPG, evaluate_all_pFedPG_mask
 from util.saving_tools import save_eval_npy_file, save_model_trainable_part, save_pfedpg_baseHeads
-os.environ['TORCH_HOME'] = '/home/qh1002/Code/Probabilistic_Prompt_Aggregation_ver2/'
+# os.environ['TORCH_HOME'] = '/home/qh1002/Code/Probabilistic_Prompt_Tuning/'
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -114,8 +114,8 @@ if __name__ == '__main__':
         testset = Data.ConcatDataset(testset)
         num_classes = 7
     elif args.dataset == 'tinyimagenet':
-        trainset = TinyImageNet_reader('../Probabilistic_Prompt_Aggregation_ver2/Dataset/tiny-imagenet-200/', train=True, transform=preprocess)
-        testset = TinyImageNet_reader('../Probabilistic_Prompt_Aggregation_ver2/Dataset/tiny-imagenet-200/', train=False, transform=preprocess)
+        trainset = TinyImageNet_reader('../Probabilistic_Prompt_Tuning/Dataset/tiny-imagenet-200/', train=True, transform=preprocess)
+        testset = TinyImageNet_reader('../Probabilistic_Prompt_Tuning/Dataset/tiny-imagenet-200/', train=False, transform=preprocess)
         num_classes = 200
     elif args.dataset == 'fourdataset':
         data_name = ['mnistm', 'fashion', 'cinic10', 'mmafedb']
