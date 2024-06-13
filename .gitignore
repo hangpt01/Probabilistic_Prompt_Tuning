@@ -1,0 +1,8 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+Dataset/*    
+*.pyc
+
+!Dataset/download.sh
+!Dataset/readme.txt
