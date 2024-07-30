@@ -210,6 +210,7 @@ if __name__ == '__main__':
         print(args.model_type == 'L2P')
         if args.model_type == 'prompted':
             weight_init = 'random'
+            # import pdb; pdb.set_trace()
             server_model = to_device(Prompted_ViT_B32(weight_init=weight_init, 
                                                       prompt_method=args.prompt_method, 
                                                       num_tokens=args.n_tokens, 

@@ -1,0 +1,140 @@
+------------Client_25 start local trainig------------
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Epoch [0], lr: 0.000100, train_loss: 0.7352, accuracy: 0.76
+Epoch [1], lr: 0.000100, train_loss: 0.1768, accuracy: 0.96
+Epoch [2], lr: 0.000100, train_loss: 0.1100, accuracy: 0.97
+Epoch [3], lr: 0.000100, train_loss: 0.0848, accuracy: 0.98
+Epoch [4], lr: 0.000100, train_loss: 0.0700, accuracy: 0.98
+------------Client_26 start local trainig------------
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Epoch [0], lr: 0.000100, train_loss: 0.4545, accuracy: 0.86
+Epoch [1], lr: 0.000100, train_loss: 0.1870, accuracy: 0.94
+Epoch [2], lr: 0.000100, train_loss: 0.1441, accuracy: 0.95
+Epoch [3], lr: 0.000100, train_loss: 0.1165, accuracy: 0.96
+Epoch [4], lr: 0.000100, train_loss: 0.1026, accuracy: 0.96
+------------Client_27 start local trainig------------
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Epoch [0], lr: 0.000100, train_loss: 0.6319, accuracy: 0.80
+Epoch [1], lr: 0.000100, train_loss: 0.1171, accuracy: 0.98
+Epoch [2], lr: 0.000100, train_loss: 0.0406, accuracy: 1.00
+Epoch [3], lr: 0.000100, train_loss: 0.0267, accuracy: 1.00
+Epoch [4], lr: 0.000100, train_loss: 0.0161, accuracy: 1.00
+------------Client_32 start local trainig------------
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Epoch [0], lr: 0.000100, train_loss: 0.2718, accuracy: 0.94
+Epoch [1], lr: 0.000100, train_loss: 0.0559, accuracy: 0.99
+Epoch [2], lr: 0.000100, train_loss: 0.0332, accuracy: 0.99
+Epoch [3], lr: 0.000100, train_loss: 0.0280, accuracy: 0.99
+Epoch [4], lr: 0.000100, train_loss: 0.0207, accuracy: 0.99
+------------Client_48 start local trainig------------
+[20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+Epoch [0], lr: 0.000100, train_loss: 0.5584, accuracy: 0.84
+Epoch [1], lr: 0.000100, train_loss: 0.2051, accuracy: 0.94
+Epoch [2], lr: 0.000100, train_loss: 0.1218, accuracy: 0.97
+Epoch [3], lr: 0.000100, train_loss: 0.0986, accuracy: 0.98
+Epoch [4], lr: 0.000100, train_loss: 0.0699, accuracy: 0.98
+------------Client_49 start local trainig------------
+[20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+Epoch [0], lr: 0.000100, train_loss: 1.0267, accuracy: 0.72
+Epoch [1], lr: 0.000100, train_loss: 0.4759, accuracy: 0.88
+Epoch [2], lr: 0.000100, train_loss: 0.3525, accuracy: 0.88
+Epoch [3], lr: 0.000100, train_loss: 0.2915, accuracy: 0.91
+Epoch [4], lr: 0.000100, train_loss: 0.2375, accuracy: 0.93
+------------Client_57 start local trainig------------
+[20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+Epoch [0], lr: 0.000100, train_loss: 0.6486, accuracy: 0.81
+Epoch [1], lr: 0.000100, train_loss: 0.2526, accuracy: 0.92
+Epoch [2], lr: 0.000100, train_loss: 0.1922, accuracy: 0.94
+Epoch [3], lr: 0.000100, train_loss: 0.1676, accuracy: 0.95
+Epoch [4], lr: 0.000100, train_loss: 0.1386, accuracy: 0.95
+------------Client_64 start local trainig------------
+[30, 31, 32, 33, 34, 35, 36]
+Epoch [0], lr: 0.000100, train_loss: 1.0059, accuracy: 0.48
+Epoch [1], lr: 0.000100, train_loss: 0.8788, accuracy: 0.57
+Epoch [2], lr: 0.000100, train_loss: 0.8557, accuracy: 0.58
+Epoch [3], lr: 0.000100, train_loss: 0.8213, accuracy: 0.60
+Epoch [4], lr: 0.000100, train_loss: 0.8069, accuracy: 0.61
+------------Client_74 start local trainig------------
+[30, 31, 32, 33, 34, 35, 36]
+Epoch [0], lr: 0.000100, train_loss: 0.6117, accuracy: 0.84
+Epoch [1], lr: 0.000100, train_loss: 0.4790, accuracy: 0.86
+Epoch [2], lr: 0.000100, train_loss: 0.4527, accuracy: 0.86
+Epoch [3], lr: 0.000100, train_loss: 0.4256, accuracy: 0.87
+Epoch [4], lr: 0.000100, train_loss: 0.4081, accuracy: 0.87
+------------Client_78 start local trainig------------
+[30, 31, 32, 33, 34, 35, 36]
+Epoch [0], lr: 0.000100, train_loss: 0.4914, accuracy: 0.88
+Epoch [1], lr: 0.000100, train_loss: 0.3173, accuracy: 0.91
+Epoch [2], lr: 0.000100, train_loss: 0.2770, accuracy: 0.92
+Epoch [3], lr: 0.000100, train_loss: 0.2649, accuracy: 0.91
+Epoch [4], lr: 0.000100, train_loss: 0.2483, accuracy: 0.92
+--------------------------Round 1 complete----------------------------
+------------Client_3 start local trainig------------
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Epoch [0], lr: 0.000100, train_loss: 0.9567, accuracy: 0.68
+Epoch [1], lr: 0.000100, train_loss: 0.6503, accuracy: 0.75
+Epoch [2], lr: 0.000100, train_loss: 0.5446, accuracy: 0.80
+Epoch [3], lr: 0.000100, train_loss: 0.5034, accuracy: 0.82
+Epoch [4], lr: 0.000100, train_loss: 0.4287, accuracy: 0.84
+------------Client_9 start local trainig------------
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Epoch [0], lr: 0.000100, train_loss: 1.2327, accuracy: 0.55
+Epoch [1], lr: 0.000100, train_loss: 0.8919, accuracy: 0.70
+Epoch [2], lr: 0.000100, train_loss: 0.7676, accuracy: 0.74
+Epoch [3], lr: 0.000100, train_loss: 0.6974, accuracy: 0.77
+Epoch [4], lr: 0.000100, train_loss: 0.6275, accuracy: 0.80
+------------Client_12 start local trainig------------
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Epoch [0], lr: 0.000100, train_loss: 0.9240, accuracy: 0.64
+Epoch [1], lr: 0.000100, train_loss: 0.6391, accuracy: 0.76
+Epoch [2], lr: 0.000100, train_loss: 0.5010, accuracy: 0.82
+Epoch [3], lr: 0.000100, train_loss: 0.4500, accuracy: 0.85
+Epoch [4], lr: 0.000100, train_loss: 0.3917, accuracy: 0.85
+------------Client_14 start local trainig------------
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Epoch [0], lr: 0.000100, train_loss: 0.8881, accuracy: 0.68
+Epoch [1], lr: 0.000100, train_loss: 0.6039, accuracy: 0.80
+Epoch [2], lr: 0.000100, train_loss: 0.4915, accuracy: 0.84
+Epoch [3], lr: 0.000100, train_loss: 0.4397, accuracy: 0.85
+Epoch [4], lr: 0.000100, train_loss: 0.3822, accuracy: 0.88
+------------Client_34 start local trainig------------
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Epoch [0], lr: 0.000100, train_loss: 0.2105, accuracy: 0.95
+Epoch [1], lr: 0.000100, train_loss: 0.0960, accuracy: 0.97
+Epoch [2], lr: 0.000100, train_loss: 0.0719, accuracy: 0.98
+Epoch [3], lr: 0.000100, train_loss: 0.0604, accuracy: 0.98
+Epoch [4], lr: 0.000100, train_loss: 0.0445, accuracy: 0.99
+------------Client_35 start local trainig------------
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Epoch [0], lr: 0.000100, train_loss: 0.3059, accuracy: 0.91
+Epoch [1], lr: 0.000100, train_loss: 0.1168, accuracy: 0.97
+Epoch [2], lr: 0.000100, train_loss: 0.0919, accuracy: 0.97
+Epoch [3], lr: 0.000100, train_loss: 0.0741, accuracy: 0.98
+Epoch [4], lr: 0.000100, train_loss: 0.0645, accuracy: 0.98
+------------Client_36 start local trainig------------
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Epoch [0], lr: 0.000100, train_loss: 0.4763, accuracy: 0.86
+Epoch [1], lr: 0.000100, train_loss: 0.1948, accuracy: 0.94
+Epoch [2], lr: 0.000100, train_loss: 0.1457, accuracy: 0.96
+Epoch [3], lr: 0.000100, train_loss: 0.1219, accuracy: 0.96
+Epoch [4], lr: 0.000100, train_loss: 0.1066, accuracy: 0.96
+------------Client_48 start local trainig------------
+[20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+Epoch [0], lr: 0.000100, train_loss: 0.3722, accuracy: 0.90
+Epoch [1], lr: 0.000100, train_loss: 0.1487, accuracy: 0.97
+Epoch [2], lr: 0.000100, train_loss: 0.0971, accuracy: 0.98
+Epoch [3], lr: 0.000100, train_loss: 0.0710, accuracy: 0.98
+Epoch [4], lr: 0.000100, train_loss: 0.0539, accuracy: 0.98
+------------Client_58 start local trainig------------
+[20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+Epoch [0], lr: 0.000100, train_loss: 0.1781, accuracy: 0.95
+Epoch [1], lr: 0.000100, train_loss: 0.0731, accuracy: 0.98
+Epoch [2], lr: 0.000100, train_loss: 0.0479, accuracy: 0.98
+Epoch [3], lr: 0.000100, train_loss: 0.0381, accuracy: 0.99
+Epoch [4], lr: 0.000100, train_loss: 0.0336, accuracy: 0.99
+------------Client_75 start local trainig------------
+[30, 31, 32, 33, 34, 35, 36]
+Epoch [0], lr: 0.000100, train_loss: 0.8411, accuracy: 0.67
+Epoch [1], lr: 0.000100, train_loss: 0.6810, accuracy: 0.72
+Epoch [2], lr: 0.000100, train_loss: 0.6488, accuracy: 0.72
+Epoch [3], lr: 0.000100, train_loss: 0.6275, accuracy: 0.74
