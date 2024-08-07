@@ -63,6 +63,7 @@ def communication(server_model, models, client_weights, fed_method='fedavg', tot
                 for client_idx in range(client_num):
                     models[client_idx].state_dict()[key].data.copy_(server_model.state_dict()[key])
     elif fed_method == 'nonparametric_aggregation':
+        import pdb; pdb.set_trace()
         for key in server_model.trainable_keys:
             if 'prompt' not in key:
                 temp = torch.zeros_like(server_model.state_dict()[key])
@@ -104,11 +105,13 @@ def communication(server_model, models, client_weights, fed_method='fedavg', tot
                         for client_idx in range(client_num):
                             models[client_idx].prompt_embeddings = nn.Parameter(temp, requires_grad=True)
     else:
+        # import pdb; pdb.set_trace()
         for key in server_model.trainable_keys:   #server_model.state_dict().keys():
             '''if 'num_batches_tracked' in key:
                 server_model.state_dict()[key].dataa.copy_(models[0].state_dict()[key])
             else:'''
             temp = torch.zeros_like(server_model.state_dict()[key])
+            # import pdb; pdb.set_trace()
             for client_idx in range(client_num):
                 temp += client_weights[client_idx] * models[client_idx].state_dict()[key]
             temp = torch.div(temp, sum_weights)

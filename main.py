@@ -5,7 +5,7 @@ from torch import nn
 import torch.utils.data as Data
 import numpy as np
 import torchvision
-from tqdm._tqdm import trange
+from tqdm.std import trange
 import pytz
 from datetime import datetime
 from Algo.get_algos import get_algorithm
