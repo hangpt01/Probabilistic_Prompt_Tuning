@@ -1,0 +1,28 @@
+------------Client_31 start local trainig------------
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Epoch [0], lr: 0.000100, train_loss: 0.9857, accuracy: 0.73
+Epoch [1], lr: 0.000100, train_loss: 0.2916, accuracy: 0.94
+Epoch [2], lr: 0.000100, train_loss: 0.1968, accuracy: 0.95
+Epoch [3], lr: 0.000100, train_loss: 0.1382, accuracy: 0.96
+Epoch [4], lr: 0.000100, train_loss: 0.1146, accuracy: 0.97
+tensor([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17,
+        18, 19], device='cuda:0')
+tensor([0.2453, 0.8019, 0.3585, 0.2170, 0.6509, 0.7925, 0.8679, 0.9340, 0.4623,
+        0.3962, 0.4057, 1.0000, 0.2547, 0.1132, 0.2830, 0.9528, 0.7075, 0.5472,
+        0.5189, 0.3396], device='cuda:0')
+------------Client_32 start local trainig------------
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Epoch [0], lr: 0.000100, train_loss: 0.6561, accuracy: 0.84
+Epoch [1], lr: 0.000100, train_loss: 0.1213, accuracy: 0.98
+Epoch [2], lr: 0.000100, train_loss: 0.0763, accuracy: 0.98
+Epoch [3], lr: 0.000100, train_loss: 0.0560, accuracy: 0.98
+Epoch [4], lr: 0.000100, train_loss: 0.0368, accuracy: 0.99
+tensor([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17,
+        18, 19], device='cuda:0')
+tensor([0.3981, 0.5340, 0.4660, 0.1262, 0.8350, 0.8350, 0.7282, 0.7476, 0.4466,
+        0.4369, 0.2816, 1.0000, 0.3883, 0.1359, 0.6893, 0.6990, 0.7961, 0.6019,
+        0.7282, 0.2913], device='cuda:0')
+------------Client_37 start local trainig------------
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Epoch [0], lr: 0.000100, train_loss: 1.1910, accuracy: 0.62
+Epoch [1], lr: 0.000100, train_loss: 0.4749, accuracy: 0.88

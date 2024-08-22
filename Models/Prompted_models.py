@@ -19,6 +19,7 @@ class Prompted_ViT_B32(nn.Module):
         self.prompt_dropout = nn.Dropout(prompt_dropout_value)
         self.prompt_proj = nn.Identity()
         self.vit_b32 = models.vit_b_32(weights='IMAGENET1K_V1')
+        
         if classification_adaptor:
             self.classification_head = nn.Sequential(
                 nn.Linear(self.vit_b32.heads.head.out_features, 512),

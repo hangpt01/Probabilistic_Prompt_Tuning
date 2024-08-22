@@ -145,3 +145,123 @@ Learning Rate: 0.0001; Batch size: 256
 -----------------------------------------------------------------------------------------
 Learning Rate: 0.0001; Batch size: 256
 *****Current Federated Learning Scenario is cross_devices*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-07 02:36:24.041692-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+4
+Comm_round_1 Server model: Eval_loss: 3.506543219089508; Accuracy: 0.18089146512092744
+4
+Comm_round_2 Server model: Eval_loss: 3.477573090791702; Accuracy: 0.15760543673795724
+4
+Comm_round_3 Server model: Eval_loss: 3.3727471470832824; Accuracy: 0.20647611433140117
+4
+Comm_round_4 Server model: Eval_loss: 3.259785807132721; Accuracy: 0.1927843294023586
+*****Final accuracy with minimal eval_loss: 0.1927843294023586*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-08 01:58:39.093463-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-08 01:59:03.391445-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-08 01:59:58.654394-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-08 02:12:03.720920-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+4
+Comm_round_1 Server model: Eval_loss: 3.5283292889595033; Accuracy: 0.10383769738157106
+4
+Comm_round_2 Server model: Eval_loss: 3.3542869985103607; Accuracy: 0.1428143114131521
+4
+Comm_round_3 Server model: Eval_loss: 3.1391825675964355; Accuracy: 0.20197881271237259
+4
+Comm_round_4 Server model: Eval_loss: 3.138692021369934; Accuracy: 0.2518488906656006
+*****Final accuracy with minimal eval_loss: 0.2518488906656006*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-08 20:33:31.258807-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-09 10:38:33.866620-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-09 10:46:30.910462-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-09 11:02:38.358248-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+4
+Comm_round_1 Server model: Eval_loss: 3.633779835700989; Accuracy: 0.0717569458325005
+4
+Comm_round_2 Server model: Eval_loss: 3.415070730447769; Accuracy: 0.19478313012192686
+4
+Comm_round_3 Server model: Eval_loss: 3.2646893739700316; Accuracy: 0.257745352788327
+4
+Comm_round_4 Server model: Eval_loss: 3.1419605791568754; Accuracy: 0.2804317409554267
+*****Final accuracy with minimal eval_loss: 0.2804317409554267*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-09 22:59:46.923826-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-09 22:59:09.367448-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+4
+Comm_round_1 Server model: Eval_loss: 3.5268652498722077; Accuracy: 0.08894663202078752
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-12 01:40:24.516711-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+4
+Comm_round_1 Server model: Eval_loss: 3.703667163848877; Accuracy: 0.04597241655006996
+4
+Comm_round_2 Server model: Eval_loss: 3.5981182932853697; Accuracy: 0.08844693184089546
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-21 17:36:47.192442-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-21 17:39:16.206426-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 256
+*****Current Federated Learning Scenario is cross_devices*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-21 17:39:38.352511-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 128
+*****Current Federated Learning Scenario is cross_devices*****
+4
+Comm_round_1 Server model: Eval_loss: 3.5233422070741653; Accuracy: 0.12792324605236857
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-21 18:40:02.682292-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 128
+*****Current Federated Learning Scenario is cross_devices*****
+-----------------------------------------------------------------------------------------
+*****Current time is 2024-08-22 01:56:25.939146-07:00 ***** Total communication rounds are 4 *****
+-----------------------------------------------------------------------------------------
+Learning Rate: 0.0001; Batch size: 128
+*****Current Federated Learning Scenario is cross_devices*****

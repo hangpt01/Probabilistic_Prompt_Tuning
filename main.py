@@ -212,15 +212,15 @@ if __name__ == '__main__':
             weight_init = 'random'
             # import pdb; pdb.set_trace()
             server_model = to_device(Prompted_ViT_B32(weight_init=weight_init, 
-                                                      prompt_method=args.prompt_method, 
-                                                      num_tokens=args.n_tokens, 
-                                                      num_classes=num_classes), args.device)
+                                                      prompt_method=args.prompt_method,        
+                                                      num_tokens=args.n_tokens,                 
+                                                      num_classes=num_classes), args.device)    
         elif args.model_type == 'L2P':
-            server_model = to_device(L2P_ViT_B32(prompt_method=args.prompt_method,
-                                                 batchwise_prompt=args.batchwise_prompt,
-                                                 pool_size=args.pool_size,
-                                                 top_k=args.n_tokens,
-                                                 num_classes=num_classes), args.device)
+            server_model = to_device(L2P_ViT_B32(prompt_method=args.prompt_method,              # default shallow
+                                                 batchwise_prompt=args.batchwise_prompt,        # default true: select prompt by batchwise
+                                                 pool_size=args.pool_size,                      # default 20
+                                                 top_k=args.n_tokens,                           # default 10: #tokens in prompt
+                                                 num_classes=num_classes), args.device)         # 4dataset: 37
             eval_pool_size = list()
             eval_pool = list()
             eval_pool_size.append(args.pool_size)

@@ -16,7 +16,7 @@ class Pool(nn.Module):
         self.top_k = top_k
         self.top_k_idx = torch.zeros(top_k)
         self.batchwise_prompt = batchwise_prompt
-        self.prompt = nn.Parameter(torch.zeros(pool_size, embed_dim))
+        self.prompt = nn.Parameter(torch.zeros(pool_size, embed_dim))       # pool_size=20, 768
         self.features_proj = nn.Linear(embed_dim, embed_dim, bias=False)
         self.features_dropout = nn.Dropout(dropout_value)
         if prompt_init == 'uniform':
@@ -33,6 +33,9 @@ class Pool(nn.Module):
         return x * x_inv_norm
         
     def forward(self, x_embed, cls_features=None, used_prompts_frequency=None):
+        # import pdb; pdb.set_trace()
+        # x_embed: batch (or smaller than batch), 49, 768
+        # print("x in pool's forward:", x_embed.shape)
         current_pool_size = self.prompt.shape[0]
         if self.embedding_key == 'cls':
             if cls_features is None:
@@ -70,13 +73,15 @@ class Pool(nn.Module):
         x_embed_norm = x_embed_norm.unsqueeze(1) # B, 1, C
         sim = batched_key_norm * x_embed_norm # B, top_k, C
         reduce_sim = torch.sum(sim) / x_embed.shape[0]
-        
+        # import pdb; pdb.set_trace()
+        # batch_prompt: batch, top_k=10, 768
         return reduce_sim, batched_prompt
         
         
 class L2P_ViT_B32(nn.Module):
-    def __init__(self, prompt_method, batchwise_prompt, classification_adaptor=True,
-                 pool_size=None, top_k=None, frozen_pretrian=True, num_classes=10):
+    def __init__(self, prompt_method, batchwise_prompt, classification_adaptor=True,        # shallow, True
+                 pool_size=None, top_k=None, frozen_pretrian=True, num_classes=10):         # 20, 10, 37
+        # import pdb; pdb.set_trace()
         super(L2P_ViT_B32, self).__init__()
         self.num_classes = num_classes
         self.trainable_keys = list()
@@ -116,21 +121,26 @@ class L2P_ViT_B32(nn.Module):
         return x
         
     def forward_features(self, x, cls_features):
-        x = self.vit_b32._process_input(x)
+        # import pdb; pdb.set_trace()
+        # x: batch, 3, 224, 224 ; cls_features: batch, 768
+        # print("x in forward features:", x.shape)
+        x = self.vit_b32._process_input(x)      # batch, 49, 768
         n = x.shape[0]
-        reduce_sim, batched_prompt = self.pool(x, cls_features=cls_features)
+        reduce_sim, batched_prompt = self.pool(x, cls_features=cls_features)    # batch_prompt: batch, top_k=10, 768
         batch_class_token = self.vit_b32.class_token.expand(n, -1, -1)
         x = torch.cat([batch_class_token, x], dim=1)
         x += self.vit_b32.encoder.pos_embedding
-        x = self.vit_b32.encoder.dropout(x)
+        x = self.vit_b32.encoder.dropout(x)         # batch, 50, 768
+        # import pdb; pdb.set_trace()
         x = torch.cat((
             x[:, :1, :],
             batched_prompt,
             x[:, 1:, :]
-        ), dim=1)
+        ), dim=1)           # class_token -> prompt -> x
         x = self.vit_b32.encoder.dropout(x)
         x = self.vit_b32.encoder.layers(x)
         features = self.vit_b32.encoder.ln(x)
+        # import pdb; pdb.set_trace()     # features: batch, 60, 768
         return reduce_sim, features
         
     def forward_head(self, features):
@@ -155,8 +165,10 @@ class L2P_ViT_B32(nn.Module):
         self.trained_prompts_checklist = torch.zeros(self.pool.prompt.shape[0], dtype=torch.torch.float32)
         
     def forward(self, x):
-        cls_features = self.get_cls_features(x)
-        reduce_sim, features = self.forward_features(x, cls_features=cls_features)
+        # x: batch, 3, 224
+        # import pdb; pdb.set_trace()
+        cls_features = self.get_cls_features(x)         # batch, 768
+        reduce_sim, features = self.forward_features(x, cls_features=cls_features)      # batch, 60, 768
         logits = self.forward_head(features)
         self.checking_trained_prompt()
         return reduce_sim, logits

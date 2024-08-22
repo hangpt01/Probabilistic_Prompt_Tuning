@@ -63,8 +63,8 @@ def communication(server_model, models, client_weights, fed_method='fedavg', tot
                 for client_idx in range(client_num):
                     models[client_idx].state_dict()[key].data.copy_(server_model.state_dict()[key])
     elif fed_method == 'nonparametric_aggregation':
-        import pdb; pdb.set_trace()
-        for key in server_model.trainable_keys:
+        # import pdb; pdb.set_trace()
+        for key in server_model.trainable_keys:     # ['classification_head.0.weight', 'classification_head.0.bias', 'classification_head.2.weight', 'classification_head.2.bias', 'pool.prompt', 'pool.features_proj.weight']
             if 'prompt' not in key:
                 temp = torch.zeros_like(server_model.state_dict()[key])
                 for client_idx in range(client_num):
@@ -75,9 +75,10 @@ def communication(server_model, models, client_weights, fed_method='fedavg', tot
                     for client_idx in range(client_num):
                         models[client_idx].state_dict()[key].data.copy_(temp)
             else:
+                import pdb; pdb.set_trace()
                 temp = list()
                 # prompt_length = server_model.state_dict()[key].shape[1]
-                prompt_dim = server_model.state_dict()[key].shape[-1]
+                prompt_dim = server_model.state_dict()[key].shape[-1]       # 768
                 if hasattr(server_model, 'trained_prompts_checklist'):
                     union_prompts_checklist = torch.zeros(server_model.state_dict()[key].shape[0],dtype=torch.int)
                     nonzero_index = torch.nonzero(server_model.trained_prompts_checklist).flatten()
@@ -86,10 +87,10 @@ def communication(server_model, models, client_weights, fed_method='fedavg', tot
                         nonzero_index = torch.nonzero(models[client_idx].trained_prompts_checklist).flatten()
                         union_prompts_checklist[nonzero_index] = 1
                     for client_idx in range(client_num):
-                        temp.append(copy.deepcopy(models[client_idx].state_dict()[key][torch.nonzero(union_prompts_checklist).flatten()]))
+                        temp.append(copy.deepcopy(models[client_idx].state_dict()[key][torch.nonzero(union_prompts_checklist).flatten()]))      # 20, 768
                 else:
                     for client_idx in range(client_num):
-                        temp.append(copy.deepcopy(models[client_idx].state_dict()[key].squeeze()))
+                        temp.append(copy.deepcopy(models[client_idx].state_dict()[key].squeeze()))      # 20, 768
                 temp = torch.stack(temp, dim=0) # temp is n_clients x prompt_length x 768
                 agg = NonparametricAgg(prompt_dim, n_hidden=nonpara_hidden).to(device)
                 temp = agg(temp)
@@ -105,16 +106,16 @@ def communication(server_model, models, client_weights, fed_method='fedavg', tot
                         for client_idx in range(client_num):
                             models[client_idx].prompt_embeddings = nn.Parameter(temp, requires_grad=True)
     else:
-        # import pdb; pdb.set_trace()
+        import pdb; pdb.set_trace()
         for key in server_model.trainable_keys:   #server_model.state_dict().keys():
             '''if 'num_batches_tracked' in key:
                 server_model.state_dict()[key].dataa.copy_(models[0].state_dict()[key])
             else:'''
-            temp = torch.zeros_like(server_model.state_dict()[key])
+            temp = torch.zeros_like(server_model.state_dict()[key])    
             # import pdb; pdb.set_trace()
             for client_idx in range(client_num):
-                temp += client_weights[client_idx] * models[client_idx].state_dict()[key]
-            temp = torch.div(temp, sum_weights)
+                temp += client_weights[client_idx] * models[client_idx].state_dict()[key]       
+            temp = torch.div(temp, sum_weights)     # fedavg - weight array([ 445,  532,  445,  379, 1457, 2719,  504, 5234, 3017, 1319])
             with torch.no_grad():
                 server_model.state_dict()[key].data.copy_(temp)
                 for client_idx in range(client_num):
